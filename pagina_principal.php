@@ -104,18 +104,19 @@ include 'php/conexion_be.php';
     </section>
 
     <section id="agendar-cita">
-        <h2>Agendar Cita</h2>
-        <form id="form-agendar-cita">
-            <label for="fecha">Fecha:</label>
-            <input type="date" id="fecha" name="fecha" required>
+      <h2>Agendar Cita</h2>
+      <form id="form-agendar-cita" method="POST" action="php/agendar_cita.php">
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
 
-            <label for="hora">Hora:</label>
-            <input type="time" id="hora" name="hora" required>
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" name="hora" required>
 
-            <button type="submit">Agendar</button>
-            <p id="mensaje-cita"></p>
-        </form>
+        <button type="submit">Agendar</button>
+        <p id="mensaje-cita"></p>
+      </form>
     </section>
+
 
     <section id="cortes">
         <h2>Galería de Cortes</h2>
@@ -133,6 +134,9 @@ include 'php/conexion_be.php';
 </main>
 
 <script src="assets/js/calendar.js"></script>
+
+<script src="assets/js/agendarCita.js"></script>
+
 </body>
 </html>
 

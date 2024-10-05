@@ -245,3 +245,111 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     border: 2px solid #ffd700; /* Bordes dorados */
     text-align: center;
 }
+
+/* Estilos para pantallas más pequeñas (móviles) */
+@media (max-width: 768px) {
+
+    /* Ajuste del body */
+    body {
+        padding: 10px;
+    }
+
+    /* Header */
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2rem; /* Reduce el tamaño del título */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Cambia la disposición del menú a vertical */
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Ajuste de la galería de imágenes */
+    .galeria-imagenes {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+    }
+
+    /* Ajuste de la sección de servicios */
+    .servicios-container {
+        grid-template-columns: 1fr; /* Una sola columna para todos los servicios */
+    }
+
+    .servicio-card {
+        max-width: 100%; /* Tarjetas ocupan el 100% del ancho disponible */
+    }
+
+    .middle-card {
+        grid-column: auto; /* Ajuste automático para evitar errores */
+        max-width: 100%;
+    }
+
+    /* Ajuste del formulario de agendar citas */
+    #agendar-cita form {
+        width: 100%;
+    }
+}
+
+/* Estilos para pantallas medianas (tabletas) */
+@media (max-width: 1024px) {
+
+    /* Ajuste del body */
+    body {
+        padding: 20px;
+    }
+
+    /* Header */
+    header h1 {
+        font-size: 2.2rem; /* Título ligeramente más pequeño */
+    }
+
+    header nav ul {
+        flex-direction: row; /* Mantén el menú en una fila */
+        flex-wrap: wrap; /* Permite que los elementos del menú se ajusten si es necesario */
+    }
+
+    header nav ul li {
+        margin: 5px 10px;
+    }
+
+    /* Galería de imágenes */
+    .galeria-imagenes {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ajuste flexible de la galería */
+    }
+
+    /* Sección de servicios */
+    .servicios-container {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas para pantallas medianas */
+    }
+
+    .middle-card {
+        max-width: 100%; /* Ajuste de la tarjeta del medio */
+    }
+}
+
+/* Estilos para pantallas más grandes */
+@media (min-width: 1025px) {
+
+    /* Ajustes de ancho */
+    main {
+        width: 80%;
+    }
+
+    /* Galería d    e imágenes */
+    .galeria-imagenes {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas para pantallas grandes */
+    }
+
+    /* Sección de servicios */
+    .servicios-container {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas para pantallas grandes */
+    }
+}
+
